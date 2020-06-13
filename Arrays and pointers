@@ -1,0 +1,14 @@
+//To access the elements of an Array using pointers 
+#include <iostream>
+using namespace std;
+int main(){
+int elements[5];
+    cout<<"Enter elements: ";
+    for( int i=0; i<5; ++i)
+    cin>>elements[i];
+    cout<<" You entered: ";
+    for( int i=0;i<5; ++i)
+    cout<< endl<< *(elements+i);
+    return 0;
+}
+   
