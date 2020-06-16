@@ -1,0 +1,28 @@
+//program to check whether a number can be express as sum of two prime numbers 
+
+#include <iostream>
+using namespace std;
+int func(int pnum) {
+   int i;
+   int flag = 1;
+   for(i = 2; i <= pnum/2; ++i) {
+      if(pnum % i == 0) {
+         flag = 0;
+         break;
+      }
+   }
+   return flag;
+}
+int main() {
+   int pnum , i;
+   cout << "Enter a number : \n";
+   cin >> pnum;
+   for(i = 2; i <= pnum/2; ++i) {
+      if (func(i)) {
+         if (func(pnum - i)) {
+            cout << pnum << " = " << i << " + " << pnum-i << endl;
+         }
+      }
+   }
+   return 0;
+}
